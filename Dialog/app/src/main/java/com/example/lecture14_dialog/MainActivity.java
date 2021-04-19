@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
     Button button;
@@ -26,18 +29,20 @@ public class MainActivity extends AppCompatActivity {
 
         builder.setCancelable(false);
 
+        LayoutInflater inflater= this.getLayoutInflater();
+        builder.setView(inflater.inflate(R.layout.my_layout_dialog, null));
         builder.setPositiveButton("Positive",
                 new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Positive Button is clicked",Toast.LENGTH_LONG);
+                Toast.makeText(MainActivity.this, "Positive Button is clicked",Toast.LENGTH_LONG).show();
             }
         });
         builder.setNegativeButton("Negative",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this, "Negative Button is clicked",Toast.LENGTH_LONG);
+                        Toast.makeText(MainActivity.this, "Negative Button is clicked",Toast.LENGTH_LONG).show();
                     }
                 });
         AlertDialog alertDialog= builder.create();
