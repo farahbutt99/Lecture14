@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void ShowDialog(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Alert Dialog");
-        builder.setMessage("It is my Alert Dialog Box");
+        builder.setTitle("Alert Dialog!");
+        builder.setMessage("It is an Alert Dialog Box");
 
         builder.setCancelable(false);
 
