@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Positive Button is clicked",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Positive Button  clicked",Toast.LENGTH_LONG).show();
             }
         });
         builder.setNegativeButton("Negative",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this, "Negative Button is clicked",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Negative Button  clicked",Toast.LENGTH_LONG).show();
                     }
                 });
         AlertDialog alertDialog= builder.create();
